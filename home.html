@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	   	<link rel="stylesheet" type="text/css" href="assets/font-awesome/css/font-awesome.min.css">
+   	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="assets/scss/home.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+</head>
+
+<body>
+<!-- call -->
+<section id="premium" class="hidden-sm hidden-xs">
+			<div class="container">
+				<div class="row ">
+					<div class="col-md-12 ">
+						
+							<span class="rightT">call us : 99451 577 80 30</span>
+						
+					</div>
+				</div>
+			</div>
+</section>
+<!-- menu -->
+<section id="menu">
+			<nav id="mainNav" class="navbar navbar-default">
+			<div class="container">
+
+			    <div class="navbar-header">
+			       
+			        <a class="navbar-brand page-scroll" href="#">
+								<img src="assets/img/logo.png" alt="logo">
+							</a>
+			    </div>
+
+			    <div class="collapse navbar-collapse" id="list">
+			        <ul class="nav navbar-nav navbar-right">
+			            <li class="active">
+			                <a class="page-scroll" href="#">Home</a>
+			            </li>
+			            <li>
+			                <a class="page-scroll" href="#">About us</a>
+			            </li>
+			            <li>
+			                <a class="page-scroll" href="#">News</a>
+			            </li>
+			            <li>
+			                <a class="page-scroll" href="#">Portfolio</a>
+			            </li>
+									<li>
+			                <a class="page-scroll" href="#">Service</a>
+			            </li>
+									<li>
+			                <a class="page-scroll" href="#">Blog</a>
+			            </li>
+									<li>
+			                <a class="page-scroll" href="#">Pages</a>
+			            </li>
+						<li>
+			              <a class="page-scroll hidden-sm hidden-xs" href="#">Contact Us</a>
+			            </li>
+			        </ul>
+			    </div>
+			</div>
+			</nav>
+
+</section>
+<!-- slider -->
+
+	<section id="slider">
+		<div class="container">
+			<div class="row center">
+				<div class="photo">
+						<img src="">
+						<div class="dcs">
+					</div>
+					<div class="btnGroup">	
+						<button onclick="prev()">Prev</button>
+						<button onclick="next()">Next</button>
+					</div>
+				</div>
+			<script type="text/javascript">
+				var imageArr=["assets/img/galgadot.jpg","assets/img/scarlet.jpg","assets/img/emilia.jpg"];
+				var dcsArr=['Gal Gadot','Scarlett Johansson','Emilia Clarke'];
+				imgSource=document.getElementsByTagName('img')[1];
+				dcsSource=document.getElementsByClassName('dcs')[0];
+				dcsSource.innerHTML=dcsArr[0];
+				imgSource.src=imageArr[0];
+
+
+
+		var count=0;
+	function next(){
+		count++;
+			if(count==imageArr.length){
+			count=0;
+			}
+		imgSource.src=imageArr[count];
+		dcsSource.innerHTML=dcsArr[count];
+		console.log(count)
+	}
+
+
+	var count = 2;
+	function prev() {
+		
+		count--;
+			if(count<0){
+			count=imageArr.length-1;
+			}
+		console.log(count);
+		imgSource.src=imageArr[count];
+		dcsSource.innerHTML=dcsArr[count];
+		console.log(count)
+	}
+	
+	
+			</script>
+			</div>
+		</div>	
+	</section>
+<!-- what -->
+<section id="what">
+	<div class="col-md-12">
+			<p><span>What</span></p>
+			<h1>We are?</h1>
+		<div class="col-md-6">
+			<div class="back">
+				<div class="front"></div>
+			</div>
+		</div>
+		<div class="col-md-6 read">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis aliquam quas, fugit dicta similique blanditiis sint nisi, repellendus, provident, quod impedit hic. Cupiditate placeat vitae, quas molestiae ducimus consequatur doloremque.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint expedita rerum incidunt quas facilis, dolores laborum a placeat, odio aut ipsum delectus inventore harum libero autem perferendis saepe ex nobis.</p>
+				<ul>
+						<li>
+			              <a class="page-scroll hidden-sm hidden-xs" href="#">Read More</a>
+			            </li>
+					</ul>
+		</div>
+	</div>
+</section>
+	
+</body>
+</html>
